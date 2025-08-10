@@ -1,0 +1,139 @@
+/* Base page styling */
+body {
+  text-align: center;
+  font-family: 'Noto Sans Syriac Eastern', Arial, sans-serif;
+  background: beige;
+  margin: 0;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.sound-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Letter list styling */
+.letter-list {
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+  background-color: #bb86fc;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Letter buttons */
+.letter-list button {
+  font-size: 1.5rem;
+  background: #fff;
+  border: 2px solid #6200ea;
+  color: #6200ea;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Noto Sans Syriac Eastern', Arial, sans-serif;
+}
+
+.letter-list button:hover {
+  background-color: #e0d7fb;
+}
+
+.letter-list button.active {
+  background-color: #6200ea;
+  color: #fff;
+}
+
+/* Container for tracing area */
+#tracingArea {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* or whatever fits your layout */
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  border: 1px solid #ccc;
+  background: #1976d2;
+}
+
+/* Layering SVG and canvas */
+svg, canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Stroke line style */
+.stroke {
+  stroke: #FF9800;
+  stroke-width: 10;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.guidePath {
+  stroke: #1976d2;
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 5, 5; /* Dashed line */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.startCircle {
+  fill: #1976d2;
+}
+
+/* Arrow overlay paths */
+.arrow {
+  stroke: transparent;
+  stroke-width: 2;
+  fill: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Step number labels */
+.label {
+  font-size: 14px;
+  fill: #efe522;
+  font-weight: bold;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Clear button styling */
+.control {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00a556;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.control:hover {
+  background-color: #222;
+}
